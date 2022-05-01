@@ -10,11 +10,15 @@ import { CafeService } from '../servicios/cafe.service';
 export class ListaCafeComponent implements OnInit {
 
   cafes: Cafe[] = [];
+  tocalCafeOrigen!: number;
+  tocalCafeBlend!: number;
   constructor(private cafeService: CafeService) { }
 
   ngOnInit(): void {
-    this.cafeService.obtenetListaCafes().subscribe(cafes => {
+    this.cafeService.obtenerListaCafes().subscribe(cafes => {
       this.cafes = cafes;
+      this.tocalCafeOrigen = cafes.filter(c => c.tipo == "Café de Origen").length;
+      this.tocalCafeBlend = cafes.filter(c => c.tipo == "Blend").length;
     });
   }
 

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+app-lista-cafe .container {
+  padding-top: 50px;
+}
+
+h1{
+  padding: 50px;
+  font-family: 'Indie Flower';
+}
+
+.footer{
+  text-align: center;
+}

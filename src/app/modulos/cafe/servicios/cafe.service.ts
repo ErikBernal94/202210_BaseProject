@@ -11,7 +11,7 @@ export class CafeService {
 
   constructor(private httpClient: HttpClient) { }
 
-  obtenetListaCafes(): Observable<Cafe[]> {
+  obtenerListaCafes(): Observable<Cafe[]> {
     return this.httpClient.get<Cafe[]>(environment.backendHost);
   }
 }
